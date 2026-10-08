@@ -7,10 +7,10 @@ on:
 
 jobs:
   run-pipeline:
-    runs-on: ubuntu-ubuntu-24.04 # Utilisation d'une version récente et stable
+    runs-on: ubuntu-latest
 
     permissions:
-      contents: write # Donne explicitement le droit au robot de modifier le dépôt
+      contents: write
 
     steps:
     - name: Récupération du dépôt source

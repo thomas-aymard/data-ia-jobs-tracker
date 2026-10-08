@@ -1,6 +1,5 @@
 name: Daily Data/IA Job Scraper Pipeline
 
-# Déclenchement automatique tous les jours à 8h00 UTC, ou manuellement depuis l'onglet Actions de GitHub
 on:
   schedule:
     - cron: '0 8 * * *'
@@ -8,7 +7,10 @@ on:
 
 jobs:
   run-pipeline:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-ubuntu-24.04 # Utilisation d'une version récente et stable
+
+    permissions:
+      contents: write # Donne explicitement le droit au robot de modifier le dépôt
 
     steps:
     - name: Récupération du dépôt source
